@@ -1,0 +1,139 @@
+.feature-box {
+    position: relative;
+    top: 10rem;
+    height: 100rem;
+    width: 100%;
+    background-color: $color-gray-dark;
+    @include respond(tablet-port) {
+        height: 280rem;
+    }
+    & h1 {
+        position: absolute;
+        left: 18%;
+        top: 5%;
+        font-size: 4rem;
+        color: white;
+        letter-spacing: 2px;
+        cursor: pointer;
+        @include respond(tablet-port) {
+            top: 0;
+        }
+        @include respond(phone) {
+            top: 5rem;
+        }
+    }
+    &-top {
+        position: absolute;
+        top: 15rem;
+        left: 20rem;
+        height: max-content;
+        width: max-content;
+        @include respond(tablet-port) {
+            left: 28rem;
+        }
+        @include respond(phone) {
+            left: 15rem;
+        }
+        &-1 {
+            margin-left: 5rem;
+            height: 10rem;
+            width: 10rem;
+            color: white;
+            animation: Bottom 3s ease;
+            & img {
+                position: relative;
+                height: 5rem;
+                border-radius: 10rem;
+                transition: all .2s ease-in-out;
+                animation: Bottom 5s ease;
+                &:hover {
+                    box-shadow: 0 0 0 4px #8364e2;
+                }
+            }
+            & h2 {
+                position: relative;
+                top: -4rem;
+                left: 7rem;
+                font-weight: normal;
+                width: max-content;
+            }
+            & p {
+                position: relative;
+                top: -3rem;
+                left: 7rem;
+            }
+        }
+    }
+    & .move-down {
+        position: relative;
+        top: 10rem;
+    }
+    &-bottom {
+        position: relative;
+        top: 50%;
+        height: max-content;
+        width: 100%;
+        & h1 {
+            position: absolute;
+            left: 8%;
+            top: -10%;
+            font-size: 4rem;
+            color: white;
+            letter-spacing: 2px;
+            cursor: pointer;
+            @include respond(tablet-port) {
+                top: 10rem;
+            }
+        }
+        &-1 {
+            height: max-content;
+            width: 100%;
+            border: 2px solid gainsboro;
+            border-radius: 10px;
+            transition: all .5s ease;
+            animation: Bottom 5s ease-in;
+            @include respond(tablet-port) {
+                position: relative;
+                top: 10rem;
+            }
+            &:hover {
+                transform: scale(1.02);
+            }
+            & .img-6 {
+                border-radius: 10px;
+                width: 100%;
+                height: 20rem;
+                // transform: scale(0.98);
+            }
+            & .bottom {
+                position: relative;
+                // top: rem;
+                height: 12rem;
+                width: 100%;
+                // z-index: 100;
+                background-color: white;
+                text-align: center;
+                & h3 {
+                    font-size: 2rem;
+                    padding-top: 3rem;
+                }
+                & p {
+                    padding-top: 1rem;
+                    color: gray;
+                    font-size: 1.3rem;
+                }
+            }
+            & .img-7 {
+                position: absolute;
+                top: -20%;
+                left: 40%;
+                border: 2px solid white;
+                height: 5rem;
+                border-radius: 5rem;
+                @include respond(tablet-port) {
+                    left: 45%;
+                }
+            }
+        }
+    }
+}

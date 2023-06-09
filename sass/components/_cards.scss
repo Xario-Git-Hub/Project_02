@@ -1,0 +1,155 @@
+.cards {
+    position: relative;
+    background-color: $color-gray-dark;
+    top: 12rem;
+    height: 100rem;
+    width: 100%;
+    @include respond(tablet-port) {
+        height: 330rem;
+    }
+    @include respond(phone) {
+        height: 380rem;
+        top: 50rem;
+    }
+    & .move-down {
+        position: relative;
+        top: 10rem;
+    }
+    &-1 {
+        height: max-content;
+        width: 100%;
+        border: 1px solid rgb(128, 120, 120);
+        background-color: $color-gray-card;
+        border-radius: 1rem;
+        text-align: center;
+        animation: moveInBottom 5s ease-in;
+        transition: all .5s;
+        outline-offset: 1rem;
+        @include respond(phone) {
+            outline-offset: .5rem;
+        }
+        &:hover {
+            background-color: $color-gray-dark;
+            transform: scale(1.2);
+            outline: 2px solid $color-red-light;
+            box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.021);
+            @include respond(phone) {
+                outline: 2px solid $color-red-light;
+                transform: scale(1.02);
+            }
+        }
+        & img {
+            padding-top: 2rem;
+        }
+        & h1 {
+            padding-top: 2rem;
+            font-size: 2rem;
+            color: white;
+            letter-spacing: 2px;
+            cursor: pointer;
+            padding-bottom: 2rem;
+            transition: all .5s;
+            &:hover {
+                color: $color-red-light;
+            }
+        }
+    }
+    &-bottom {
+        position: absolute;
+        top: 30%;
+        height: max-content;
+        width: 100%;
+        & .move-down {
+            position: relative;
+            @include respond(tablet-port) {
+                left: 10rem;
+                top: -10rem;
+            }
+            @include respond(phone) {
+                top: 50rem;
+            }
+        }
+        & h1 {
+            font-size: 4rem;
+            font-weight: normal;
+            color: white;
+            margin-left: 10rem;
+            margin-bottom: 2rem;
+            @include respond(tablet-port) {
+                position: absolute;
+                top: -20rem;
+            }
+            @include respond(phone) {
+                position: absolute;
+                top: 40rem;
+            }
+        }
+        &-2 {
+            height: max-content;
+            width: max-content;
+            border: 1px solid rgb(80, 76, 76);
+            border-radius: 1rem;
+            animation: Bottom 3s ease;
+            transition: all .4s;
+            &:hover {
+                transform: scale(1.02);
+            }
+            & .img-4 {
+                position: relative;
+                top: -18rem;
+                left: -24rem;
+                padding-top: 2rem;
+                height: 6rem;
+                width: 4rem;
+                border-radius: 3rem;
+                z-index: 100;
+            }
+            & .img-5 {
+                height: 22rem;
+                width: 20rem;
+                margin-top: 2rem;
+                margin-left: 4rem;
+                border-radius: 2rem;
+            }
+            & h3 {
+                padding-top: 2rem;
+                font-size: 1.8rem;
+                color: white;
+                font-weight: normal;
+                padding-left: 2rem;
+            }
+            & h4 {
+                color: rgb(126, 109, 109);
+                font-size: 1.4rem;
+                padding-top: 1rem;
+                padding-left: 2rem;
+                font-weight: normal;
+                & span {
+                    color: white;
+                }
+            }
+            & h6 {
+                font-size: 1.6rem;
+                padding-top: .5rem;
+                padding-left: 2rem;
+                padding-bottom: 2rem;
+                color: $color-red-normal;
+                font-weight: normal;
+            }
+            & i {
+                position: relative;
+                top: -4rem;
+                left: 80%;
+                font-size: 1.6rem;
+                color: white;
+                transition: all .3s;
+                &:hover {
+                    color: $color-red-normal;
+                }
+                & .span-1 {
+                    color: white;
+                }
+            }
+        }
+    }
+}

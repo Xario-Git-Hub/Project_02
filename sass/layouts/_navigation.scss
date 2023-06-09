@@ -1,0 +1,99 @@
+.navigation {
+    position: relative;
+    height: 6rem;
+    width: 100%;
+    background-color: transparent;
+    z-index: 100;
+    & img {
+        position: absolute;
+        top: 20%;
+        left: 8rem;
+        animation: moveInBottom .3s ease;
+        @include respond(tablet-landscape) {
+            left: 3%;
+        }
+    }
+    & input {
+        position: absolute;
+        left: 10%;
+        top: 4%;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        margin-top: 1rem;
+        font-family: inherit;
+        padding: 1rem 2rem;
+        border-radius: 10rem;
+        background-color: rgba(255, 255, 255, 0.712);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 20rem;
+        display: block;
+        color: inherit;
+        transition: all .3s;
+        @include respond(tablet-landscape) {
+            left: 7%;
+        }
+        @include respond(phone) {
+            width: 15rem;
+            left: 10%;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: 1rem 1rem 2rem rgba(black, .3);
+            border-bottom: 3px solid $color-red-normal;
+            &:invalid {
+                border-bottom: 3px solid rgb(219, 115, 115);
+            }
+            &::-webkit-input-placeholder {
+                color: gray;
+                font-weight: lighter;
+            }
+        }
+    }
+    & ul {
+        position: absolute;
+        top: 30%;
+        left: 45%;
+        @include respond(tablet-port) {
+            left: 33%;
+        }
+        @include respond(phone) {
+            display: none;
+        }
+        & li {
+            list-style: none;
+            float: left;
+            margin-left: 2rem;
+            font-size: 1.8rem;
+            color: white;
+            transition: all .8s ease-in;
+            cursor: pointer;
+            & i {
+                transition: all .8s ease-out;
+                &:hover {
+                    color: red;
+                }
+            }
+            &:hover {
+                transform: scale(1.1);
+                border-bottom: 2px solid red;
+                transform: rotate(10deg);
+                width: fit-content;
+            }
+        }
+    }
+    & .btn {
+        position: absolute;
+        left: 80%;
+        top: 20%;
+        @include respond(tablet-landscape) {
+            left: 85%;
+        }
+        @include respond(tablet-port) {
+            padding: 1rem 1rem;
+        }
+        @include respond(phone) {
+            left: 78%;
+        }
+    }
+}

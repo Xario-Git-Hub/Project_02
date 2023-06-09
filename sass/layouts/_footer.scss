@@ -1,0 +1,144 @@
+.footer {
+    position: relative;
+    top: 5rem;
+    height: 50rem;
+    width: 100%;
+    background-color: $color-gray-card;
+    @include respond(tablet-port) {
+        display: none;
+    }
+    @include respond(phone) {
+        display: block;
+    }
+    & .move-down {
+        position: relative;
+        top: 5rem;
+    }
+    & input {
+        @include respond(phone) {
+            left: 50%;
+            top: 20%;
+        }
+        position: absolute;
+        left: 78%;
+        top: 46%;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        margin-top: 1rem;
+        font-family: inherit;
+        padding: 1rem 2rem;
+        border-radius: 10rem;
+        background-color: rgba(255, 255, 255, 0.712);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 20rem;
+        display: block;
+        color: inherit;
+        transition: all .3s;
+        &:focus {
+            outline: none;
+            box-shadow: 1rem 1rem 2rem rgba(black, .3);
+            border-bottom: 3px solid $color-red-normal;
+            &:invalid {
+                border-bottom: 3px solid rgb(219, 115, 115);
+            }
+            &::-webkit-input-placeholder {
+                color: gray;
+                font-weight: lighter;
+            }
+        }
+    }
+    & h2 {
+        font-size: 2rem;
+        color: white;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-weight: normal;
+    }
+    & p {
+        color: white;
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        font-weight: lighter;
+        @include respond(phone) {
+            position: absolute;
+            top: 20rem;
+            left: 28rem;
+            width: 30rem;
+        }
+    }
+    & ul {
+        @include respond(phone) {
+            display: none;
+        }
+        & li {
+            list-style: none;
+            color: gainsboro;
+            font-size: 1.5rem;
+            padding-bottom: 1.5rem;
+            width: fit-content;
+            transition: all .5s ease;
+            cursor: pointer;
+            animation: Bottom-rotat-1 5s ease-in;
+            &:hover {
+                transform: scale(1.09) translateX(20px);
+                color: $color-red-normal;
+            }
+        }
+    }
+    & .btn {
+        left: 15rem;
+        @include respond(phone) {
+            position: absolute;
+            top: 22%;
+            left: 80%;
+        }
+    }
+}
+
+.End {
+    position: absolute;
+    top: 85%;
+    height: 8rem;
+    width: 100%;
+    background-color: $color-gray-dark;
+    & img {
+        position: absolute;
+        top: 20%;
+        left: 7%;
+    }
+    & p {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        @include respond(phone) {
+            left: 20%;
+        }
+    }
+    & ul {
+        & li {
+            position: relative;
+            top: 2rem;
+            left: 80%;
+            list-style: none;
+            float: left;
+            margin-left: 2rem;
+            height: 1rem;
+            width: 2rem;
+            border-radius: 5px;
+            color: wheat;
+            background-color: $color-gray-card;
+            padding-left: .5rem;
+            padding-top: .5rem;
+            transition: all .5s ease;
+            &:hover {
+                color: $color-gray-card;
+                background-color: white;
+                transform: scale(1.09) translateX(0);
+            }
+        }
+    }
+}
